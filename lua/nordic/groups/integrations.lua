@@ -304,17 +304,17 @@ function M.get_groups()
     --- Keywords
     G['@keyword'] = { link = 'Keyword' } -- For keywords that don't fall in previous categories.
     G['@keyword.conditional'] = { link = 'Conditional' }
-    G['@keyword.coroutine'] = { link = 'Macro' } -- For keywords related to coroutines.
+    G['@keyword.coroutine'] = { fg = C.red.bright, italic = true, bold = true } -- For keywords related to coroutines.
     G['@keyword.debug'] = { link = 'Debug' }
     G['@keyword.directive'] = { link = 'PreProc' }
     G['@keyword.directive.define'] = { link = 'Define' }
     G['@keyword.exception'] = { link = 'Exception' }
-    G['@keyword.export'] = { link = 'Keyword' }
+    G['@keyword.export'] = { fg = C.magenta.bright, italic = true }
     G['@keyword.function'] = { link = 'Keyword' } -- For keywords used to define a fuction.
-    G['@keyword.import'] = { link = 'Include' }
+    G['@keyword.import'] = { fg = C.magenta.bright, italic = true }
     G['@keyword.operator'] = { link = 'Keyword' }
     G['@keyword.repeat'] = { link = 'Repeat' }
-    G['@keyword.return'] = { link = 'Keyword' }
+    G['@keyword.return'] = { fg = C.red.bright, italic = true }
     G['@keyword.storage'] = { link = 'StorageClass' }
     G['@label'] = { link = 'Keyword' } -- For labels: `label:` in C and `:label:` in Lua.
     --- Types
@@ -374,7 +374,7 @@ function M.get_groups()
     G['@markup.strikethrough'] = { strikethrough = true }
     G['@markup.underline'] = { underline = true }
     -- TSX
-    G['@tag.tsx'] = { fg = C.blue1 }
+    G['@tag.tsx'] = { fg = C.blue1, bold = true }
     G['@constructor.tsx'] = { fg = C.blue1 }
     G['@tag.delimiter.tsx'] = { fg = C.blue1 }
     --LSP Semantic Token Groups
@@ -385,7 +385,7 @@ function M.get_groups()
     G['@lsp.type.enumMember'] = { link = 'Field' }
     G['@lsp.type.escapeSequence'] = { link = '@string.escape' }
     G['@lsp.type.formatSpecifier'] = { link = '@punctuation.special' }
-    G['@lsp.type.interface'] = { link = 'Keyword' }
+    G['@lsp.type.interface'] = { fg = C.magenta.bright, bold = true, italic = true }
     G['@lsp.type.keyword'] = { link = 'Keyword' }
     G['@lsp.type.namespace'] = { link = 'Namespace' }
     G['@lsp.type.number'] = { link = 'Number' }

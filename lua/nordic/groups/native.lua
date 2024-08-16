@@ -27,20 +27,20 @@ function M.get_groups()
     G.Builtin = { fg = C.blue0 }
     G.Identifier = { fg = C.fg } -- (preferred) any variable name
     G.Function = { fg = C.blue2 } -- function name (also: methods for classes)
-    G.Keyword = { fg = C.orange.base, bold = O.bold_keywords } --  any other keyword
+    G.Keyword = { fg = C.orange.base, bold = O.bold_keywords, italic = true } --  any other keyword
     G.Statement = { link = 'Keyword' } -- (preferred) any statement
-    G.Conditional = { link = 'Keyword' } --  if, then, else, endif, switch, etc.
+    G.Conditional = { fg = C.red.base, italic = true } --  if, then, else, endif, switch, etc.
     G.Repeat = { link = 'Keyword' } --   for, do, while, etc.
     G.Label = { link = 'Keyword' } --    case, default, etc.
     G.Operator = { fg = C.fg } -- "sizeof", "+", "*", etc.
-    G.Macro = { fg = C.red.base } -- same as Define
-    G.Exception = { link = 'Macro' } --  try, catch, throw
+    G.Macro = { fg = C.red.base, italic = true } -- same as Define
+    G.Exception = { fg = C.red.bright, italic = true } --  try, catch, throw
     G.PreProc = { link = 'Macro' } -- (preferred) generic preprocessor
     G.Include = { link = 'Macro' } --  preprocessor #include
     G.Define = { link = 'Macro' } --   preprocessor #define
     G.PreCondit = { link = 'Macro' } --  preprocessor #if, #else, #endif, etc.
     G.Comment = { fg = C.gray4, italic = O.italic_comments }
-    G.Type = { fg = C.yellow.base } -- (preferred) int, long, char, etc.
+    G.Type = { fg = C.yellow.base, bold = true } -- (preferred) int, long, char, etc.
     G.StorageClass = { link = 'Keyword' } -- static, register, volatile, etc.
     G.Structure = { link = 'Type' } --  struct, union, enum, etc.
     G.Typedef = { link = 'Type' } --  A typedef
